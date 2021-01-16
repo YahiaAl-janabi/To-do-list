@@ -24,9 +24,41 @@
           padding-top: 3.125rem;
 
           h1 {
+            width: 25rem;
+            margin: auto;
             height: 6.25rem;
             background-color: crimson;
             padding-top: 2.125rem;
+          }
+        }
+        #todo-input {
+          width: 25rem;
+          margin-left: 12.5rem;
+          padding: 1rem;
+          border: none;
+        }
+        #todo-submit {
+          background-color: cornflowerblue;
+          border: none;
+          display: block;
+          padding: 1rem;
+          float: right;
+          margin-right: 7.9rem;
+        }
+        ul {
+          border: 0.5rem solid black;
+          margin-top: 1rem;
+          margin-left: 12.5rem;
+          height: auto;
+          width: 25rem;
+          padding: 0.5rem;
+
+          li {
+            text-align: left;
+            background-color: darkgray;
+            list-style: none;
+            text-decoration: none;
+            padding: 1rem;
           }
         }
       }
