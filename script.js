@@ -19,24 +19,23 @@ function addListItem() {
 
 function listBorderHide() {
   var ul = document.querySelector("ul");
-  if ((ul.innerHTML = " ")) {
+  if (ul.innerHTML === "") {
     ul.style.display = "none";
   }
 }
 
 function listBorderShow() {
   var ul = document.querySelector("ul");
-  if (ul.innerHTML != " ") {
+  if (ul.innerHTML !== "") {
     ul.style.display = "block";
   }
 }
-
-document.querySelector("body").onload = function () {
-  listBorderHide();
-};
 
 //This is the anonymous function for listening for the event handler
 document.getElementById("todo-submit").onclick = function () {
   addListItem();
   listBorderShow();
+};
+document.querySelector("body").onload = function () {
+  listBorderHide();
 };
