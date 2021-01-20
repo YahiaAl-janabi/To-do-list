@@ -1,17 +1,18 @@
 function addListItem() {
-  let li = document.createElement("li"); //creation of the li variable that represents the html li element.
-  let inputValue = document.getElementById("todo-input").value; //creation of the inputValue variable that represents the value of the input.
-  let t = document.createTextNode(inputValue); //creation of the html input value.
-  li.appendChild(t); //appending the html input value the li variable that represents the html li element.
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("todo-input").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
   if (inputValue === "") {
-    alert("please write something"); //when there is no value in the input
+    alert("please write something");
   } else {
-    document.querySelector("ul").appendChild(li); //when there is a value in the input the li variable that represents the html li element with the input value is appended to the ul element
+    document.querySelector("ul").appendChild(li);
   }
 }
+
 //This function is used for hiding the list border when there is no li items.
 function listBorderHide() {
-  let ul = document.querySelector("ul");
+  var ul = document.querySelector("ul");
   if (ul.innerHTML === "") {
     ul.style.display = "none";
   }
@@ -19,7 +20,7 @@ function listBorderHide() {
 
 // This function is used for showing the list border when there are list items.
 function listBorderShow() {
-  let ul = document.querySelector("ul");
+  var ul = document.querySelector("ul");
   if (ul.innerHTML !== "") {
     ul.style.display = "block";
   }

@@ -73,7 +73,13 @@
             text-decoration: none;
             padding: 1rem;
           }
+          li:nth-of-type(1n + 6) {
+            display: none;
+          }
         }
+      }
+      p {
+        background-color: blue;
       }
     }
   }
