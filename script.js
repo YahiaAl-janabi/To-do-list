@@ -9,6 +9,21 @@ function addListItem() {
     document.querySelector("ul").appendChild(li);
   }
 }
+var count = 0;
+function maxItems() {
+  var li = document.querySelector("li");
+  var ul = document.querySelector("ul");
+  var submit = document.getElementById("todo-submit").onclick;
+  if (submit) {
+    count++;
+  }
+  console.log(count);
+  if (count >= 6) {
+    alert("Task limit reached");
+  } else {
+    addListItem();
+  }
+}
 
 //This function is used for hiding the list border when there is no li items.
 function listBorderHide() {
@@ -28,7 +43,7 @@ function listBorderShow() {
 
 //This is the anonymous function for listening for the event handler
 document.getElementById("todo-submit").onclick = function () {
-  addListItem();
+  maxItems();
   listBorderShow();
 };
 document.querySelector("body").onload = function () {
