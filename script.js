@@ -2,7 +2,9 @@ function addListItem() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("todo-input").value;
   var t = document.createTextNode(inputValue);
+  var y = document.createTextNode("\u2BC1" + " ");
   li.appendChild(t);
+  li.prepend(y);
   if (inputValue === "") {
     alert("please write something");
   } else {

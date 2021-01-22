@@ -5,10 +5,11 @@
 
   body {
     .container1 {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       border: 0.5rem solid rgb(0, 0, 0);
       height: 100vh;
       width: 100vw;
-      background-color: cadetblue;
+      background-color: rgb(255, 255, 255);
       padding-top: 5rem;
 
       .todobody {
@@ -16,7 +17,8 @@
         border: 0.5rem solid rgb(0, 0, 0);
         width: 50rem;
         height: 50rem;
-        background-color: brown;
+        background: #0f6c7e
+          linear-gradient(147deg, #0f6c7e, #0f6c7e 25%, #47d3e6) no-repeat;
         text-align: center;
         margin: auto;
         overflow: auto;
@@ -25,32 +27,43 @@
         .todoheader {
           height: 12.5rem;
           width: 50rem;
-          background-color: chocolate;
           padding-top: 3.125rem;
 
           h1 {
+            color: white;
+            font-size: 4rem;
+
+            letter-spacing: 0.2rem;
+            text-decoration: underline;
             width: 25rem;
             margin: auto;
             height: 6.25rem;
-            background-color: crimson;
             padding-top: 2.125rem;
           }
         }
         .is {
-          margin-left: 12.3rem;
-          width: 30rem;
+          width: 50rem;
 
           #todo-input {
+            font-size: 1.3rem;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+              sans-serif;
+            background-color: rgb(255, 255, 255);
             width: 25rem;
             padding: 1rem;
             border: none;
+            margin-left: 6rem;
           }
           #todo-submit {
-            background-color: cornflowerblue;
+            background-color: chartreuse;
+            font-size: 1.3rem;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+              sans-serif;
+            background-color: rgb(164, 193, 247);
             border: none;
             display: inline;
             padding: 1rem;
-            margin-left: -0.3rem;
+            margin-left: -0.25rem;
           }
         }
         ul {
@@ -68,9 +81,9 @@
           li {
             border-bottom: 0.2rem solid black;
             text-align: left;
-            background-color: darkgray;
+            background-color: rgb(255, 255, 255);
             list-style: none;
-            text-decoration: none;
+            font-size: 1.3rem;
             padding: 1rem;
           }
         }
