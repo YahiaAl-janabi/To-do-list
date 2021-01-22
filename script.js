@@ -11,8 +11,6 @@ function addListItem() {
 }
 var count = 0;
 function maxItems() {
-  var li = document.querySelector("li");
-  var ul = document.querySelector("ul");
   var submit = document.getElementById("todo-submit").onclick;
   if (submit) {
     count++;
