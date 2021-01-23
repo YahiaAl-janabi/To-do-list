@@ -1,9 +1,9 @@
 function addListItem() {
-  var ul = document.querySelector("ul");
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("todo-input").value;
-  var t = document.createTextNode(inputValue);
-  var y = document.createTextNode("\u2BC1" + " ");
+  let ul = document.querySelector("ul");
+  let li = document.createElement("li");
+  let inputValue = document.getElementById("todo-input").value;
+  let t = document.createTextNode(inputValue);
+  let y = document.createTextNode("\u2BC1" + " ");
 
   li.appendChild(t);
   li.prepend(y);
@@ -14,9 +14,9 @@ function addListItem() {
     document.querySelector("ul").appendChild(li);
   }
 }
-var count = 0;
+let count = 0;
 function maxItems() {
-  var submit = document.getElementById("todo-submit").onclick;
+  let submit = document.getElementById("todo-submit").onclick;
   if (submit) {
     count++;
   }
@@ -30,7 +30,7 @@ function maxItems() {
 
 //This function is used for hiding the list border when there is no li items.
 function listBorderHide() {
-  var ul = document.querySelector("ul");
+  let ul = document.querySelector("ul");
   if (ul.innerHTML === "") {
     ul.style.display = "none";
   }
@@ -38,7 +38,7 @@ function listBorderHide() {
 
 // This function is used for showing the list border when there are list items.
 function listBorderShow() {
-  var ul = document.querySelector("ul");
+  let ul = document.querySelector("ul");
   if (ul.innerHTML !== "") {
     ul.style.display = "block";
   }
