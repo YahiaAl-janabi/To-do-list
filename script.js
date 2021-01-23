@@ -1,10 +1,13 @@
 function addListItem() {
+  var ul = document.querySelector("ul");
   var li = document.createElement("li");
   var inputValue = document.getElementById("todo-input").value;
   var t = document.createTextNode(inputValue);
   var y = document.createTextNode("\u2BC1" + " ");
+
   li.appendChild(t);
   li.prepend(y);
+
   if (inputValue === "") {
     alert("please write something");
   } else {
@@ -46,6 +49,7 @@ document.getElementById("todo-submit").onclick = function () {
   maxItems();
   listBorderShow();
 };
+
 document.querySelector("body").onload = function () {
   listBorderHide();
 };
