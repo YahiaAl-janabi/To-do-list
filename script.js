@@ -48,3 +48,7 @@ document.getElementById("todo-submit").onclick = function () {
   maxItems();
   listBorderShow();
 };
+
+document.querySelector("body").onload = function () {
+  listBorderHide();
+};
