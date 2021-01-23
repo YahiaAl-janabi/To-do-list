@@ -1,5 +1,4 @@
 function addListItem() {
-  let ul = document.querySelector("ul");
   let li = document.createElement("li");
   let inputValue = document.getElementById("todo-input").value;
   let t = document.createTextNode(inputValue);
@@ -48,8 +47,4 @@ function listBorderShow() {
 document.getElementById("todo-submit").onclick = function () {
   maxItems();
   listBorderShow();
-};
-
-document.querySelector("body").onload = function () {
-  listBorderHide();
 };
