@@ -1,29 +1,34 @@
-function addListItem() {
+//Creates the task from input value
+function taskCreateFunc() {
   let li = document.createElement("li");
   let inputValue = document.getElementById("todo-input").value;
-  let t = document.createTextNode(inputValue);
-  let y = document.createTextNode("\u2BC1" + " ");
-
-  li.appendChild(t);
-  li.prepend(y);
-
+  let textNode_inputValue = document.createTextNode(inputValue);
+  let textNode_unicodeDiamond = document.createTextNode("\u2BC1" + " ");
+  li.appendChild(textNode_inputValue);
+  li.prepend(textNode_unicodeDiamond);
   if (inputValue === "") {
     alert("please write something");
   } else {
     document.querySelector("ul").appendChild(li);
   }
 }
+
+//Counts the number of tasks
 let count = 0;
-function maxItems() {
+function taskCountFunc() {
   let submit = document.getElementById("todo-submit").onclick;
   if (submit) {
     count++;
   }
-  console.log(count);
+}
+
+//Adds the created task to the list and limits the amount of possible tasks to 5
+function taskAddFunc() {
+  taskCountFunc();
   if (count >= 6) {
     alert("Task limit reached");
   } else {
-    addListItem();
+    taskCreateFunc();
   }
 }
 
@@ -43,12 +48,13 @@ function listBorderShow() {
   }
 }
 
-//This is the anonymous function for listening for the event handler
+//When submit is clicked taskAddFunc() and listBorderShow() are called
 document.getElementById("todo-submit").onclick = function () {
-  maxItems();
+  taskAddFunc();
   listBorderShow();
 };
 
+//When the body loads listBorderHide() is called
 document.querySelector("body").onload = function () {
   listBorderHide();
 };
